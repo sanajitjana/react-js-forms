@@ -37,41 +37,108 @@ const App = () => {
 
   return (
     <>
-      <div className="container text-center" style={{ paddingTop: "15%" }}>
-        <h1>Hi, {NameView}</h1>
-        <h5>{EmailView}</h5>
-        <h6>{mobileView}</h6>
-        <div className="pt-3 pb-3">
-          <input
-            type="text"
-            placeholder="Enter name"
-            onChange={nameFucn}
-            value={nameValue}
-          />
-          <br />
-          <br />
+      <div className="container pt-5">
+        <h1 className="pb-4">Hi, {NameView}</h1>
+        {/* <h5>{EmailView}</h5>
+        <h6>{mobileView}</h6> */}
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input
+                type="text"
+                id="form6Example1"
+                class="form-control"
+                onChange={nameFucn}
+                value={nameValue}
+              />
+              <label class="form-label" for="form6Example1">
+                First name
+              </label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form6Example2" class="form-control" />
+              <label class="form-label" for="form6Example2">
+                Last name
+              </label>
+            </div>
+          </div>
+        </div>
+
+        {/* <!-- Text input --> */}
+        <div class="form-outline mb-4">
+          <input type="text" id="form6Example3" class="form-control" />
+          <label class="form-label" for="form6Example3">
+            Company name
+          </label>
+        </div>
+
+        {/* <!-- Text input --> */}
+        <div class="form-outline mb-4">
+          <input type="text" id="form6Example4" class="form-control" />
+          <label class="form-label" for="form6Example4">
+            Address
+          </label>
+        </div>
+
+        {/* <!-- Email input --> */}
+        <div class="form-outline mb-4">
           <input
             type="email"
-            placeholder="Enter email"
+            id="form6Example5"
+            class="form-control"
             onChange={emailFucn}
             value={EmailValue}
           />
-          <br />
-          <br />
+          <label class="form-label" for="form6Example5">
+            Email
+          </label>
+        </div>
+
+        {/* <!-- Number input --> */}
+        <div class="form-outline mb-4">
           <input
             type="number"
-            placeholder="Enter mobile"
+            id="form6Example6"
+            class="form-control"
             onChange={mobileFucn}
             value={mobileValue}
           />
+          <label class="form-label" for="form6Example6">
+            Phone
+          </label>
         </div>
+
+        {/* <!-- Message input --> */}
+        <div class="form-outline mb-4">
+          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
+          <label class="form-label" for="form6Example7">
+            Additional information
+          </label>
+        </div>
+
+        {/* <!-- Checkbox --> */}
+        <div class="form-check mb-4">
+          <input
+            class="form-check-input me-2"
+            type="checkbox"
+            value=""
+            id="form6Example8"
+            checked
+          />
+          <label class="form-check-label" for="form6Example8">
+            Accept term &amp; condition?
+          </label>
+        </div>
+
+        {/* <!-- Submit button --> */}
         <button
-          type="button"
-          value=""
-          className="btn btn-primary"
+          type="submit"
+          class="btn btn-primary btn-block mb-4"
           onClick={onSubmit}
         >
-          Click Me
+          Save Information
         </button>
       </div>
     </>
