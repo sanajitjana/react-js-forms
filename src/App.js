@@ -1,35 +1,49 @@
 import { useState, React } from "react";
 
 const App = () => {
-  const [Text, setText] = useState("");
-  const [FullName, setFullName] = useState("");
+  //fullname
+  const [FullnameValue, setFullnameValue] = useState("");
+  const [FullNameView, setFullNameView] = useState("");
 
-  const textEvent = (fieldValue) => {
-    setText(fieldValue.target.value);
+  //email
+  const [EmailValue, setEmailValue] = useState("");
+  const [EmailView, setEmailView] = useState("");
+
+  //fullname fucn
+  const fullnameFucn = (fullnameValue) => {
+    setFullnameValue(fullnameValue.target.value);
   };
 
+  //email fucn
+  const emailFucn = (emailValue) => {
+    setEmailValue(emailValue.target.value);
+  };
+
+  //button click fucn
   const onSubmit = () => {
-    setFullName(Text);
+    setFullNameView(FullnameValue);
+    setEmailView(EmailValue);
   };
 
   return (
     <>
       <div className="container text-center" style={{ paddingTop: "20%" }}>
-        <h1>Hi, {FullName}</h1>
+        <h1>Hi, {FullNameView}</h1>
+        <h6>{EmailView}</h6>
         <div className="pt-3 pb-3">
           <input
             type="text"
             placeholder="Full name"
-            onChange={textEvent}
-            value={Text}
+            onChange={fullnameFucn}
+            value={FullnameValue}
           />
           <br />
           <br />
           <input
-            type="text"
+            type="email"
             placeholder="Email"
-            onChange={textEvent}
-            value={Text}
+            onChange={emailFucn}
+            value={EmailValue}
           />
         </div>
         <button
