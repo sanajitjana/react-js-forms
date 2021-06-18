@@ -143,6 +143,9 @@ const App = () => {
         >
           Save Information
         </button>
+        <h6 className="text-center pb-5">
+          Copyright &copy; 2021 Sanajit Jana. All Rights Reserved.
+        </h6>
       </div>
     </>
   );
