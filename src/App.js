@@ -46,6 +46,9 @@ const App = () => {
           {/* <!-- First name input --> */}
           <div class="col">
             <div class="form-outline">
+              <label class="form-label" for="form6Example1">
+                First name
+              </label>
               <input
                 type="text"
                 id="form6Example1"
@@ -53,41 +56,41 @@ const App = () => {
                 onChange={nameFucn}
                 value={nameValue}
               />
-              <label class="form-label" for="form6Example1">
-                First name
-              </label>
             </div>
           </div>
 
           {/* <!-- Last name input --> */}
           <div class="col">
             <div class="form-outline">
-              <input type="text" id="form6Example2" class="form-control" />
               <label class="form-label" for="form6Example2">
                 Last name
               </label>
+              <input type="text" id="form6Example2" class="form-control" />
             </div>
           </div>
         </div>
 
         {/* <!-- Company name input --> */}
         <div class="form-outline mb-4">
-          <input type="text" id="form6Example3" class="form-control" />
           <label class="form-label" for="form6Example3">
             Company name
           </label>
+          <input type="text" id="form6Example3" class="form-control" />
         </div>
 
         {/* <!-- Address input --> */}
         <div class="form-outline mb-4">
-          <input type="text" id="form6Example4" class="form-control" />
           <label class="form-label" for="form6Example4">
             Address
           </label>
+          <input type="text" id="form6Example4" class="form-control" />
         </div>
 
         {/* <!-- Email input --> */}
         <div class="form-outline mb-4">
+          <label class="form-label" for="form6Example5">
+            Email
+          </label>
           <input
             type="email"
             id="form6Example5"
@@ -95,13 +98,13 @@ const App = () => {
             onChange={emailFucn}
             value={EmailValue}
           />
-          <label class="form-label" for="form6Example5">
-            Email
-          </label>
         </div>
 
         {/* <!-- Number input --> */}
         <div class="form-outline mb-4">
+          <label class="form-label" for="form6Example6">
+            Phone
+          </label>
           <input
             type="number"
             id="form6Example6"
@@ -109,17 +112,14 @@ const App = () => {
             onChange={mobileFucn}
             value={mobileValue}
           />
-          <label class="form-label" for="form6Example6">
-            Phone
-          </label>
         </div>
 
         {/* <!-- Message input --> */}
         <div class="form-outline mb-4">
-          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
           <label class="form-label" for="form6Example7">
             Additional information
           </label>
+          <textarea class="form-control" id="form6Example7" rows="4"></textarea>
         </div>
 
         {/* <!-- Checkbox --> */}
