@@ -19,7 +19,15 @@ const App = () => {
         <div className="pt-3 pb-3">
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="Full name"
+            onChange={textEvent}
+            value={Text}
+          />
+          <br />
+          <br />
+          <input
+            type="text"
+            placeholder="Email"
             onChange={textEvent}
             value={Text}
           />
