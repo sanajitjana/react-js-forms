@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <>
-      <div className="container text-center pt-5">
+      <div className="container text-center" style={{ paddingTop: "20%" }}>
         <h1>Hi, {FullName}</h1>
         <div className="pt-3 pb-3">
           <input
