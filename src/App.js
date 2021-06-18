@@ -1,47 +1,47 @@
 import { useState, React } from "react";
 
 const App = () => {
-  //fullname
-  const [FullnameValue, setFullnameValue] = useState("");
-  const [FullNameView, setFullNameView] = useState("");
+  //name load state
+  const [nameValue, setnameValue] = useState("");
+  const [NameView, setNameView] = useState("");
 
-  //email
+  //email load state
   const [EmailValue, setEmailValue] = useState("");
   const [EmailView, setEmailView] = useState("");
 
-  //fullname fucn
-  const fullnameFucn = (fullnameValue) => {
-    setFullnameValue(fullnameValue.target.value);
+  //name event fucn
+  const nameFucn = (nameValue) => {
+    setnameValue(nameValue.target.value);
   };
 
-  //email fucn
+  //email event fucn
   const emailFucn = (emailValue) => {
     setEmailValue(emailValue.target.value);
   };
 
   //button click fucn
   const onSubmit = () => {
-    setFullNameView(FullnameValue);
+    setNameView(nameValue);
     setEmailView(EmailValue);
   };
 
   return (
     <>
       <div className="container text-center" style={{ paddingTop: "20%" }}>
-        <h1>Hi, {FullNameView}</h1>
+        <h1>Hi, {NameView}</h1>
         <h6>{EmailView}</h6>
         <div className="pt-3 pb-3">
           <input
             type="text"
-            placeholder="Full name"
-            onChange={fullnameFucn}
-            value={FullnameValue}
+            placeholder="Enter name"
+            onChange={nameFucn}
+            value={nameValue}
           />
           <br />
           <br />
           <input
             type="email"
-            placeholder="Email"
+            placeholder="Enter email"
             onChange={emailFucn}
             value={EmailValue}
           />
