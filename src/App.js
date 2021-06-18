@@ -39,9 +39,11 @@ const App = () => {
     <>
       <div className="container pt-5">
         <h1 className="pb-4">Hi, {NameView}</h1>
-        {/* <h5>{EmailView}</h5>
-        <h6>{mobileView}</h6> */}
+        <h5>{EmailView}</h5>
+        <h6>{mobileView}</h6>
+
         <div class="row mb-4">
+          {/* <!-- First name input --> */}
           <div class="col">
             <div class="form-outline">
               <input
@@ -56,6 +58,8 @@ const App = () => {
               </label>
             </div>
           </div>
+
+          {/* <!-- Last name input --> */}
           <div class="col">
             <div class="form-outline">
               <input type="text" id="form6Example2" class="form-control" />
@@ -66,7 +70,7 @@ const App = () => {
           </div>
         </div>
 
-        {/* <!-- Text input --> */}
+        {/* <!-- Company name input --> */}
         <div class="form-outline mb-4">
           <input type="text" id="form6Example3" class="form-control" />
           <label class="form-label" for="form6Example3">
@@ -74,7 +78,7 @@ const App = () => {
           </label>
         </div>
 
-        {/* <!-- Text input --> */}
+        {/* <!-- Address input --> */}
         <div class="form-outline mb-4">
           <input type="text" id="form6Example4" class="form-control" />
           <label class="form-label" for="form6Example4">
@@ -123,12 +127,11 @@ const App = () => {
           <input
             class="form-check-input me-2"
             type="checkbox"
-            value=""
             id="form6Example8"
             checked
           />
           <label class="form-check-label" for="form6Example8">
-            Accept term &amp; condition?
+            Accept term &amp; conditions.
           </label>
         </div>
 
