@@ -109,7 +109,7 @@ const App = () => {
               Phone
             </label>
             <input
-              type="number"
+              type="text"
               id="form6Example6"
               class="form-control"
               onChange={mobileFucn}
