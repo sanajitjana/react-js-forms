@@ -2,7 +2,7 @@ import { useState, React } from "react";
 
 const App = () => {
   //name load state
-  const [nameValue, setnameValue] = useState("");
+  const [fnameValue, setnameValue] = useState("");
   const [NameView, setNameView] = useState(""); //button click state
 
   //email load state
@@ -14,7 +14,7 @@ const App = () => {
   const [mobileView, setmobileView] = useState(""); //button click state
 
   //name show fucn
-  const nameFucn = (nameKeyValue) => {
+  const fnameFucn = (nameKeyValue) => {
     setnameValue(nameKeyValue.target.value);
   };
 
@@ -31,7 +31,7 @@ const App = () => {
   //button click fucn
   const onSubmit = (e) => {
     e.preventDefault();
-    setNameView(nameValue);
+    setNameView(fnameValue);
     setEmailView(EmailValue);
     setmobileView(mobileValue);
   };
@@ -56,8 +56,9 @@ const App = () => {
                   type="text"
                   id="form6Example1"
                   class="form-control"
-                  onChange={nameFucn}
-                  value={nameValue}
+                  onChange={fnameFucn}
+                  value={fnameValue}
+                  required
                 />
               </div>
             </div>
@@ -68,7 +69,14 @@ const App = () => {
                 <label class="form-label" for="form6Example2">
                   Last name
                 </label>
-                <input type="text" id="form6Example2" class="form-control" />
+                <input
+                  type="text"
+                  id="form6Example2"
+                  // onChange={lnameFucn}
+                  // value={lnameValue}
+                  class="form-control"
+                  required
+                />
               </div>
             </div>
           </div>
@@ -100,6 +108,7 @@ const App = () => {
               class="form-control"
               onChange={emailFucn}
               value={EmailValue}
+              required
             />
           </div>
 
@@ -109,11 +118,12 @@ const App = () => {
               Phone
             </label>
             <input
-              type="text"
+              type="phone"
               id="form6Example6"
               class="form-control"
               onChange={mobileFucn}
               value={mobileValue}
+              required
             />
           </div>
 
