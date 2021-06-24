@@ -84,7 +84,7 @@ const App = () => {
           {/* <!-- Company name input --> */}
           <div class="form-outline mb-4">
             <label class="form-label" for="form6Example3">
-              Company name
+              Organisation / Institute name
             </label>
             <input type="text" id="form6Example3" class="form-control" />
           </div>
